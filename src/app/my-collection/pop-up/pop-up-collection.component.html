@@ -1,0 +1,12 @@
+<div class="shade" *ngIf="isOpen"></div>
+<div class="pop-up" *ngIf="isOpen">
+  <div class="pop-up-box">
+    <div class="close-btn">
+      <fa name="window-close" size="lg" (click)="onClose()"></fa>
+    </div>
+    <img
+      src="{{gif.images.original.url}}"
+    >
+    <div class="del" (click)="delFromCollection(gif.id)"><fa name="trash" size="2x"></fa></div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="row mt-3">
+  <div class="col">
+    <h2 class="text-center" >Hi {{logIn.userName}}! Here you can upload files to the resource giphy.com.</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <form [formGroup]="form" (ngSubmit)="onSubmin()">
+      <div class="form-group">
+        <button class="btn btn-success upload-button">
+          <input type="file"
+                 #fileInput
+                 formControlName="file"
+                 (change)="onFileSelect(fileInput)"
+          />
+          <fa name="upload"></fa>
+        </button>
+
+        <span class="file-info">{{ fileInfo }}</span>
+      </div>
+      <div class="form-group">
+        <label for="name">Enter file name</label>
+        <input id="name" type="text" class="form-control" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="tag">Enter file tags (separated by commas)</label>
+        <input id="tag" type="text" class="form-control" formControlName="tags">
+      </div>
+      <button class="btn btn-success" type="submit" [disabled]="form.invalid">Upload</button>
+    </form>
+  </div>
+</div>

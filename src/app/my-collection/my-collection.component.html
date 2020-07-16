@@ -1,0 +1,20 @@
+<div class="row mt-3">
+  <div class="col">
+    <h2 class="text-center" *ngIf="myCollection.length > 0">Hi {{logIn.userName}}! Here is your collection.</h2>
+    <h2 class="text-center" *ngIf="myCollection.length == 0">Sorry {{logIn.userName}}, but your collection is empty!</h2>
+    <div class="gif-greed">
+      <div class="gif-item" *ngFor="let gif of myCollection">
+        <img
+          (click)="gifClicked(gif)"
+          src="{{gif.images.fixed_height.url}}"
+        >
+        <div class="del" (click)="delFromCollection(gif.id)"><fa name="trash" size="2x"></fa></div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-pop-up-collection
+  [isOpen]="popUpOpen"
+  [gif]="clickedGif"
+  (btnClose)="isClosed()"
+></app-pop-up-collection>

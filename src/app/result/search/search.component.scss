@@ -1,0 +1,18 @@
+.search {
+  display: flex;
+  button {
+    color: #fff;
+  }
+}
+
+.gif-tags {
+  position: absolute;
+  width:100%;
+  background: #efefef;
+  z-index: 10;
+  span {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+}

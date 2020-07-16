@@ -1,0 +1,47 @@
+.gif-item {
+  position: relative;
+  img {
+    cursor: pointer;
+  }
+  .add {
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+    color: #e2e2e2;
+    opacity: 0.5;
+    transform: scale( .75 );
+    cursor: pointer;
+        &:hover {
+          animation: pulse 2s infinite;
+          color: rgba( 255, 66, 66, 1.00 );
+          opacity: 1;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}

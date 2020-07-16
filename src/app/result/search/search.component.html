@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col">
+    <div class="search">
+      <input class="form-control" [(ngModel)]="inputSearch" (input)="onKeyUp($event)">
+      <button class="btn btn-success" (click)="onSearch()"><fa name="search" size="lg"></fa></button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="gif-tags">
+      <span *ngFor="let tag of tagsArr" (click)="setTag(tag.name)"><fa name="search"></fa> {{ tag.name }}</span>
+    </div>
+  </div>
+</div>

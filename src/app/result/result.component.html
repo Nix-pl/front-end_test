@@ -1,0 +1,13 @@
+<app-search
+  (SearchGifs)="loadGifsList($event)"
+  (LoadByScroll)="updateGifsList($event)"></app-search>
+<div class="row">
+  <div class="gif-greed">
+    <app-gif-item
+      class="gif-item"
+      *ngFor="let gif of gifsArr"
+      [gifItem]="gif">
+    </app-gif-item>
+  </div>
+</div>
+

@@ -1,0 +1,12 @@
+<div class="gif-item">
+  <img
+    (click)="gifClicked()"
+    src="{{gifItem.images.fixed_height.url}}"
+  >
+  <div class="add" (click)="addToCollection()"><fa name="plus" size="2x"></fa></div>
+</div>
+<app-pop-up
+  [isOpen]="popUpOpen"
+  [gif]="gifItem"
+  (btnClose)="isClosed()"
+></app-pop-up>
